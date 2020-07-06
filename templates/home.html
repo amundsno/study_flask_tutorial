@@ -1,0 +1,15 @@
+{% extends "layout.html" %} <!-- We are extending the layout.html layout-->
+{% block content %} <!-- Everything inside this block will replace the 'block content' in layout.html-->
+    {% for post in posts %} <!-- This is a code block -->
+        <article class="media content-section">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author }}</a>
+                <small class="text-muted">{{ post.date_posted }}</small>
+              </div>
+              <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+              <p class="article-content">{{ post.content }}</p>
+            </div>
+          </article>
+    {% endfor %} <!-- This ends the codeblock -->
+{% endblock content %}
